@@ -8,7 +8,7 @@
 
 @if (ViewBag.UserName == null)
 {
-    <a class="navbar-brand nav-link" asp-area="" asp-controller="Login" asp-action="Index">Login</a>
+    <a class="text-dark nav-link" asp-area="" asp-controller="Login" asp-action="Index">Faça login para ter acesso</a>
 }
 else
 {
@@ -56,10 +56,10 @@ else
                         <img src="/img/Equipes/@jogador.Equipe.Imagem" alt="Imagem da equipe @jogador.Equipe.Nome" width="50px">
                     </td>
                     <td>
-                        <a asp-area="" asp-controller="Jogador" asp-action="Excluir" asp-route-id="@jogador.IdJogador">Excluir</a>
+                        <a class="text-dark nav-link" asp-area="" asp-controller="Jogador" asp-action="Excluir" asp-route-id="@jogador.IdJogador">Excluir</a>
                     </td>
                     <td>
-                        <a asp-area="" asp-controller="Jogador" asp-action="Editar" asp-route-id="@jogador.IdJogador">Editar</a>
+                        <a class="text-dark nav-link" asp-area="" asp-controller="Jogador" asp-action="Editar" asp-route-id="@jogador.IdJogador">Editar</a>
                     </td>
 
                 </tr>

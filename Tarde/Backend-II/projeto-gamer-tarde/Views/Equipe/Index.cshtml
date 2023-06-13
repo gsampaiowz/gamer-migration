@@ -8,7 +8,7 @@
 
 @if (ViewBag.UserName == null)
 {
-    <a class="navbar-brand nav-link" asp-area="" asp-controller="Login" asp-action="Index">Login</a>
+    <a class="text-dark nav-link" asp-area="" asp-controller="Login" asp-action="Index">Faça login para ter acesso</a>
 }
 else
 {
@@ -54,3 +54,85 @@ else
 </table>
 }
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipes</title>
+    <link rel="stylesheet" href="~/css/reset-and-basics.css">
+    <link rel="stylesheet" href="~/css/header.css">
+    <link rel="stylesheet" href="~/css/equipes.css">
+    <link rel="stylesheet" href="~/css/footer.css">
+
+</head>
+<body>
+
+    <!-- MAIN -->
+    <main>
+
+        <section class="container-grid cadastro-equipes">
+            
+            
+            <form action="" class="frm-cad-equipe">
+                <div class="cadequipe-titulo">
+                    <h1>Cadastro de Equipes</h1>
+                    <hr>
+                </div>
+
+                <input class="campo-entrada" type="number" id="idEquipe" placeholder="Digite o Id da sua equipe:">
+                <input class="campo-entrada" type="text" placeholder="Digite o nome da sua equipe:">
+                <label class="foto" for="foto-file">
+                    Nenuma imagem selecionada...
+                    <input  type="file" id="foto-file">
+                </label>
+                
+                <button>Cadastro</button>
+                
+                
+                
+                <!-- <select class="equipeid" id="equipeid">
+                    <option value="">Selecione uma Equipe</option>
+                    <option value="x">Equipe X</option>
+                    <option value="y">Equipe Y</option>
+                </select> -->
+            </form>
+
+            <!-- TABELA CADASTRO DE EQUIPES -->
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Foto</th>
+                        <th>&spades;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Loud</td>
+                        <td><img class="green-play" src="~/assets/green-play.svg" alt=""></td>
+                        <td><img class="yellow-trash" src="~/assets/trash.png" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Loud</td>
+                        <td><img class="green-play" src="~/assets/green-play.svg" alt=""></td>
+                        <td><img class="yellow-trash" src="~/assets/trash.png" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Loud</td>
+                        <td><img class="green-play" src="~/assets/green-play.svg" alt=""></td>
+                        <td><img class="yellow-trash" src="~/assets/trash.png" alt=""></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+</body>
+</html>
