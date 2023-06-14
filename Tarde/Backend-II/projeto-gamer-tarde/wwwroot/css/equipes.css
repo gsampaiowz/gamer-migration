@@ -3,18 +3,11 @@
 /* Main */
 
 main {
-    margin-top: 60px;
     height: 1231px;
     background-image: url(../images/background-equipes-mobile.png);
     background-size: contain;
     background-position: top;
 }
-
-
-
-
-
-
 
 /* FORMULÁRIO DE CADASTRO DE EQUIPES */
 main .cadastro-equipes {

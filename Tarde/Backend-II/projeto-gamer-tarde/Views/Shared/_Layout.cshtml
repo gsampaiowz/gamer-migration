@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>@ViewData["Title"] - projeto_gamer_tarde</title>
         <link rel="stylesheet" href="~/css/style.css" />
+        <link rel="stylesheet" href="~/css/header-footer.css">
     </head>
 
     <body>
@@ -56,6 +57,7 @@
                         <nav>
                             <a asp-area="Botão para ínicio"
                                     asp-controller="Home" asp-action="Index">Início</a>
+
                         @if (ViewBag.UserName != null)
                         {
                                 <a asp-area="Botão para jogadores"
@@ -122,7 +124,7 @@
             <div class="container-grid footer-flex">
                 <div class="card-ftitem-box">
                     <a href="#" id="ftlogo-link">
-                        <img src="./assets/logotipo-gamer.svg" id="ftlogo"
+                        <img src="~/assets/logotipo-gamer.svg" id="ftlogo"
                             alt="Home" />
                     </a>
                     <p>
@@ -132,15 +134,15 @@
                     </p>
                     <div class="social-fticons">
                         <a href="#">
-                            <img src="./assets/facebook-yellow.svg"
+                            <img src="~/assets/facebook-yellow.svg"
                                 alt="Icone Facebook" />
                         </a>
                         <a href="#">
-                            <img src="./assets/linkedin-yellow.svg"
+                            <img src="~/assets/linkedin-yellow.svg"
                                 alt="Icone Linkedin" />
                         </a>
                         <a href="#">
-                            <img src="./assets/instagram-yellow.svg"
+                            <img src="~/assets/instagram-yellow.svg"
                                 alt="Icone instagram" />
                         </a>
                     </div>
@@ -203,15 +205,8 @@
 
             <div id="copyright">&#169;Copyright2022-GamerJogosDigitais</div>
 
-            <img src="./assets/Botao_voltar_ao_topo.svg" id="back-to-top"
+            <img src="~/assets/Botao_voltar_ao_topo.svg" id="back-to-top"
                 alt="Voltar ao Topo" />
-        </footer>
-
-        <footer class="border-top footer text-muted">
-            <div class="container">
-                &copy; 2023 - projeto_gamer_tarde -
-                <a asp-area="Botao" asp-controller="Home" asp-action="Privacy">Privacy</a>
-            </div>
         </footer>
 
     @await RenderSectionAsync("Scripts", required: false)

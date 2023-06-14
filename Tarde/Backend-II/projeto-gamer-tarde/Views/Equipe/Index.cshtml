@@ -4,9 +4,9 @@
     ViewData["Title"] = "Equipe";
 }
 
-<h1>Tela de Equipes</h1>
+@* <h1>Tela de Equipes</h1>
 
-@if (ViewBag.UserName == null)
+ @if (ViewBag.UserName == null)
 {
     <a class="text-dark nav-link" asp-area="" asp-controller="Login" asp-action="Index">Faça login para ter acesso</a>
 }
@@ -52,87 +52,69 @@ else
         
     </tbody>
 </table>
+} *@
+
+@if (ViewBag.UserName == null)
+{
+    <a class="text-dark nav-link" asp-area="" asp-controller="Login" asp-action="Index">Faça login para ter acesso</a>
+}
+else
+{
+    <link rel="stylesheet" href="~/css/equipes.css">
+<!-- MAIN -->
+<main>
+
+    <section class="container-grid cadastro-equipes">
+        
+        
+        <form method='post' action='@Url.Action("Cadastrar")' enctype="multipart/form-data" class="frm-cad-equipe">
+            <div class="cadequipe-titulo">
+                <h1>Cadastro de Equipes</h1>
+                <hr>
+            </div>
+
+            @* <input class="campo-entrada" type="number" id="idEquipe" placeholder="Digite o Id da sua equipe:"> *@
+            <input name="Nome" required class="campo-entrada" type="text" placeholder="Digite o nome da sua equipe:">
+            <label style="cursor:pointer;"  class="foto" for="foto-file">
+                Nenuma imagem selecionada...
+                <input name="Imagem" type="file" id="foto-file">
+            </label>
+            
+            <button style="cursor:pointer;" type="submit">Cadastro</button>
+            
+
+        </form>
+
+        <!-- TABELA CADASTRO DE EQUIPES -->
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Imagem</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Equipe equipe in ViewBag.Equipe)
+    {
+        <tr>
+            <td>@equipe.IdEquipe</td>
+            <td>@equipe.Nome</td>
+            <td>
+                <img src="/img/Equipes/@equipe.Imagem" alt="Imagem da equipe @equipe.Nome" width="50px">
+            </td>
+            <td>
+                <a asp-area="" asp-controller="Equipe" asp-action="Excluir" asp-route-id="@equipe.IdEquipe">Excluir_____</a>
+                <a asp-area="" asp-controller="Equipe" asp-action="Editar" asp-route-id="@equipe.IdEquipe">Editar</a>
+            </td>
+        </tr>
+    }
+            </tbody>
+        </table>
+    </section>
+</main>
 }
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Equipes</title>
-    <link rel="stylesheet" href="~/css/reset-and-basics.css">
-    <link rel="stylesheet" href="~/css/header.css">
-    <link rel="stylesheet" href="~/css/equipes.css">
-    <link rel="stylesheet" href="~/css/footer.css">
 
-</head>
-<body>
-
-    <!-- MAIN -->
-    <main>
-
-        <section class="container-grid cadastro-equipes">
-            
-            
-            <form action="" class="frm-cad-equipe">
-                <div class="cadequipe-titulo">
-                    <h1>Cadastro de Equipes</h1>
-                    <hr>
-                </div>
-
-                <input class="campo-entrada" type="number" id="idEquipe" placeholder="Digite o Id da sua equipe:">
-                <input class="campo-entrada" type="text" placeholder="Digite o nome da sua equipe:">
-                <label class="foto" for="foto-file">
-                    Nenuma imagem selecionada...
-                    <input  type="file" id="foto-file">
-                </label>
-                
-                <button>Cadastro</button>
-                
-                
-                
-                <!-- <select class="equipeid" id="equipeid">
-                    <option value="">Selecione uma Equipe</option>
-                    <option value="x">Equipe X</option>
-                    <option value="y">Equipe Y</option>
-                </select> -->
-            </form>
-
-            <!-- TABELA CADASTRO DE EQUIPES -->
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Nome</th>
-                        <th>Foto</th>
-                        <th>&spades;</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Loud</td>
-                        <td><img class="green-play" src="~/assets/green-play.svg" alt=""></td>
-                        <td><img class="yellow-trash" src="~/assets/trash.png" alt=""></td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Loud</td>
-                        <td><img class="green-play" src="~/assets/green-play.svg" alt=""></td>
-                        <td><img class="yellow-trash" src="~/assets/trash.png" alt=""></td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Loud</td>
-                        <td><img class="green-play" src="~/assets/green-play.svg" alt=""></td>
-                        <td><img class="yellow-trash" src="~/assets/trash.png" alt=""></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </main>
-
-</body>
-</html>

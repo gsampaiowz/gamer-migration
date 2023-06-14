@@ -13,7 +13,7 @@
 else
 {
 
-    <form method="post" action="@Url.Action("Atualizar")" enctype="multipart/form-data">
+    <form method="post" action='@Url.Action("Atualizar")' enctype="multipart/form-data">
 
         <input type="hidden" name="IdEquipe" value="@ViewBag.Equipe.IdEquipe">
 
@@ -26,4 +26,34 @@ else
         <button type="submit">Atualizar</button>
 
     </form>
+
+        <link rel="stylesheet" href="~/css/equipes.css">
+<!-- MAIN -->
+<main>
+
+    <section class="container-grid cadastro-equipes">
+        
+        
+        <form method='post' action='@Url.Action("Atualizar")' enctype="multipart/form-data" class="frm-cad-equipe">
+            <div class="cadequipe-titulo">
+                <h1>Edição de Equipes</h1>
+                <hr>
+            </div>
+
+<input type="hidden" name="IdEquipe" value="@ViewBag.Equipe.IdEquipe">
+            <input class="campo-entrada" type="number" id="idEquipe" placeholder="Digite o Id da sua equipe:">
+            <input name="Nome" required class="campo-entrada" type="text" placeholder="Digite o nome da sua equipe:">
+            <label style="cursor:pointer;"  class="foto" for="foto-file">
+                Nenuma imagem selecionada...
+                <input name="Imagem" type="file" id="foto-file">
+            </label>
+            
+            <button style="cursor:pointer;" type="submit">Cadastro</button>
+            
+
+        </form>
+    </section>
+</main>
 }
+
+

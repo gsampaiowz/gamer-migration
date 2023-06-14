@@ -245,6 +245,22 @@
       "PackagePath": "staticwebassets\\css\\equipes.css"
     },
     {
+      "Id": "C:\\Users\\42591939888\\Desktop\\gamer-migration\\Tarde\\Backend-II\\projeto-gamer-tarde\\wwwroot\\css\\header-footer.css",
+      "PackagePath": "staticwebassets\\css\\header-footer.css"
+    },
+    {
+      "Id": "C:\\Users\\42591939888\\Desktop\\gamer-migration\\Tarde\\Backend-II\\projeto-gamer-tarde\\wwwroot\\css\\home.css",
+      "PackagePath": "staticwebassets\\css\\home.css"
+    },
+    {
+      "Id": "C:\\Users\\42591939888\\Desktop\\gamer-migration\\Tarde\\Backend-II\\projeto-gamer-tarde\\wwwroot\\css\\jogadores.css",
+      "PackagePath": "staticwebassets\\css\\jogadores.css"
+    },
+    {
+      "Id": "C:\\Users\\42591939888\\Desktop\\gamer-migration\\Tarde\\Backend-II\\projeto-gamer-tarde\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
       "Id": "C:\\Users\\42591939888\\Desktop\\gamer-migration\\Tarde\\Backend-II\\projeto-gamer-tarde\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -353,12 +369,20 @@
       "PackagePath": "staticwebassets\\img\\Equipes\\bahia.png"
     },
     {
+      "Id": "C:\\Users\\42591939888\\Desktop\\gamer-migration\\Tarde\\Backend-II\\projeto-gamer-tarde\\wwwroot\\img\\Equipes\\cortinas.png",
+      "PackagePath": "staticwebassets\\img\\Equipes\\cortinas.png"
+    },
+    {
       "Id": "C:\\Users\\42591939888\\Desktop\\gamer-migration\\Tarde\\Backend-II\\projeto-gamer-tarde\\wwwroot\\img\\Equipes\\ibis.png",
       "PackagePath": "staticwebassets\\img\\Equipes\\ibis.png"
     },
     {
       "Id": "C:\\Users\\42591939888\\Desktop\\gamer-migration\\Tarde\\Backend-II\\projeto-gamer-tarde\\wwwroot\\img\\Equipes\\padrao.png",
       "PackagePath": "staticwebassets\\img\\Equipes\\padrao.png"
+    },
+    {
+      "Id": "C:\\Users\\42591939888\\Desktop\\gamer-migration\\Tarde\\Backend-II\\projeto-gamer-tarde\\wwwroot\\img\\Equipes\\santastico.png",
+      "PackagePath": "staticwebassets\\img\\Equipes\\santastico.png"
     },
     {
       "Id": "C:\\Users\\42591939888\\Desktop\\gamer-migration\\Tarde\\Backend-II\\projeto-gamer-tarde\\wwwroot\\img\\Equipes\\sao paulo.jfif",
