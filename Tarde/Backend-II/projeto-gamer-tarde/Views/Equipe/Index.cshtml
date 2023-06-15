@@ -56,6 +56,7 @@ else
 
 @if (ViewBag.UserName == null)
 {
+    @
     <a class="text-dark nav-link" asp-area="" asp-controller="Login" asp-action="Index">Faça login para ter acesso</a>
 }
 else
@@ -106,7 +107,7 @@ else
                 <img src="/img/Equipes/@equipe.Imagem" alt="Imagem da equipe @equipe.Nome" width="50px">
             </td>
             <td>
-                <a asp-area="" asp-controller="Equipe" asp-action="Excluir" asp-route-id="@equipe.IdEquipe">Excluir_____</a>
+                <a asp-area="" asp-controller="Equipe" asp-action="Excluir" asp-route-id="@equipe.IdEquipe"><img class="yellow-trash" src="./assets/trash.png" alt=""></a>
                 <a asp-area="" asp-controller="Equipe" asp-action="Editar" asp-route-id="@equipe.IdEquipe">Editar</a>
             </td>
         </tr>
