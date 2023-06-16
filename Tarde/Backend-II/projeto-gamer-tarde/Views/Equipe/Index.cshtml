@@ -56,7 +56,6 @@ else
 
 @if (ViewBag.UserName == null)
 {
-    @
     <a class="text-dark nav-link" asp-area="" asp-controller="Login" asp-action="Index">Faça login para ter acesso</a>
 }
 else
@@ -75,11 +74,11 @@ else
             </div>
 
             @* <input class="campo-entrada" type="number" id="idEquipe" placeholder="Digite o Id da sua equipe:"> *@
-            <input name="Nome" required class="campo-entrada" type="text" placeholder="Digite o nome da sua equipe:">
-            <label style="cursor:pointer;"  class="foto" for="foto-file">
-                Nenuma imagem selecionada...
-                <input name="Imagem" type="file" id="foto-file">
-            </label>
+            <input name="Nome" required class="campo-entrada" type="text" placeholder="Digite o nome da sua equipe:">    
+            <div class="flex-file">
+                <label for="image">Imagem da Equipe...</label>
+                <input name="Imagem" type="file" id="image" />
+              </div>
             
             <button style="cursor:pointer;" type="submit">Cadastro</button>
             
@@ -107,7 +106,7 @@ else
                 <img src="/img/Equipes/@equipe.Imagem" alt="Imagem da equipe @equipe.Nome" width="50px">
             </td>
             <td>
-                <a asp-area="" asp-controller="Equipe" asp-action="Excluir" asp-route-id="@equipe.IdEquipe"><img class="yellow-trash" src="./assets/trash.png" alt=""></a>
+                <a asp-area="" asp-controller="Equipe" asp-action="Excluir" asp-route-id="@equipe.IdEquipe"><img class="yellow-trash" src="~/assets/trash.png" alt=""></a>
                 <a asp-area="" asp-controller="Equipe" asp-action="Editar" asp-route-id="@equipe.IdEquipe">Editar</a>
             </td>
         </tr>
