@@ -1,0 +1,32 @@
+@model Equipe
+
+@{
+ViewData["Title"] = "Edit";
+}
+
+<link rel="stylesheet" href="~/css/equipes.css">
+<!-- MAIN -->
+<main>
+
+    <section class="container-grid cadastro-equipes">
+
+        <form method='post' action='@Url.Action("Atualizar")' enctype="multipart/form-data" class="frm-cad-equipe">
+            <div class="cadequipe-titulo">
+                <h1>Edição de Equipes</h1>
+                <hr>
+            </div>
+
+            <input type="hidden" name="IdEquipe" value="@ViewBag.Equipe.IdEquipe">
+            <input name="Nome" required value="@ViewBag.Equipe.Nome" class="campo-entrada" type="text"
+                placeholder="Digite o nome da sua equipe:">
+            <label style="cursor:pointer;" class="foto" for="foto-file">
+                <input value="@ViewBag.Equipe.Imagem" name="Imagem" type="file" id="foto-file">
+                <p value="@ViewBag.Equipe.Imagem">Imagem atual: </p>
+                <img src="/img/Equipes/@ViewBag.Equipe.Imagem" alt="">
+            </label>
+
+            <button style="cursor:pointer;" type="submit">Atualizar</button>
+
+        </form>
+    </section>
+</main>

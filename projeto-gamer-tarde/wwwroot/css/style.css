@@ -1,0 +1,156 @@
+/* TitilliumWeb */
+@font-face {
+	font-family: TitilliumWeb-Black;
+	src: url(../assets/fonts/Titillium_Web/TitilliumWeb-Black.ttf);
+}
+
+@font-face {
+	font-family: TitilliumWeb-SemiBold;
+	src: url(../assets/fonts/Titillium_Web/TitilliumWeb-SemiBold.ttf);
+}
+
+@font-face {
+	font-family: TitilliumWeb-Bold;
+	src: url(../assets/fonts/Titillium_Web/TitilliumWeb-Bold.ttf);
+}
+
+@font-face {
+	font-family: TitilliumWeb-Regular;
+	src: url(../assets/fonts/Titillium_Web/TitilliumWeb-Regular.ttf);
+}
+
+/* Inter */
+@font-face {
+	font-family: Inter-Thin;
+	src: url(../assets/fonts/Inter/static/Inter-Thin.ttf);
+}
+
+@font-face {
+	font-family: Inter-Regular;
+	src: url(../assets/fonts/Inter/static/Inter-Regular.ttf);
+}
+
+@font-face {
+	font-family: Inter-SemiBold;
+	src: url(../assets/fonts/Inter/static/Inter-SemiBold.ttf);
+}
+
+@font-face {
+	font-family: Inter-Bold;
+	src: url(../assets/fonts/Inter/static/Inter-Bold.ttf);
+}
+
+@font-face {
+	font-family: Quicksand-Regular;
+	src: url(../assets/fonts/Quicksand/static/Quicksand-Regular.ttf);
+}
+
+@font-face {
+	font-family: Quicksand-SemiBold;
+	src: url(../assets/fonts/Quicksand/static/Quicksand-SemiBold.ttf);
+}
+
+@font-face {
+	font-family: Quicksand-Bold;
+	src: url(../assets/fonts/Quicksand/static/Quicksand-Bold.ttf);
+}
+
+/* ScrollBar */
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+::-webkit-scrollbar-button {
+	width: 0;
+	height: 0;
+}
+::-webkit-scrollbar-thumb {
+	background: #f9aa01;
+	border: 0px none #ffffff;
+	border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #ff7b00;
+}
+::-webkit-scrollbar-thumb:active {
+	background: #ff7b00;
+}
+::-webkit-scrollbar-track {
+	background: black;
+	border: 0px none #ffffff;
+	border-radius: 100px;
+}
+::-webkit-scrollbar-track:hover {
+	background: black;
+}
+::-webkit-scrollbar-track:active {
+	background: black;
+}
+::-webkit-scrollbar-corner {
+	background: transparent;
+}
+
+/* Sem suporte desativado */
+.sem-suporte {
+	display: none;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Inter-Regular;
+	font-size: 14px;
+	color: white;
+	background-color: #1b1426;
+}
+
+/* Generals */
+#back-to-top {
+	z-index: 99;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	width: 35px;
+	cursor: pointer;
+}
+
+/********************* MEDIAS *********************/
+/* Desktop */
+
+@media screen and (min-width: 992px) {
+	.container-grid {
+		max-width: 992px;
+		margin: 0 auto;
+		/* border: 1px solid #EC4358; */
+	}
+}
+
+/* Sem suporte */
+@media (max-width: 320px) {
+	header,
+	main,
+	footer,
+	.fundo-login {
+		display: none;
+	}
+	.sem-suporte {
+		padding: 50px;
+		height: 100vh;
+		display: flex;
+		background-color: #1b1426;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 50px;
+		font-family: TitilliumWeb-Bold;
+	}
+	.sem-suporte img {
+		width: 100px;
+		height: 100px;
+	}
+}

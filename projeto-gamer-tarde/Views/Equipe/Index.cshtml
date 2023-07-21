@@ -1,0 +1,61 @@
+@model Equipe
+
+@{ ViewData["Title"] = "Equipe"; }
+
+<link rel="stylesheet" href="~/css/equipes.css" />
+<!-- MAIN -->
+<main>
+	<section class="container-grid cadastro-equipes">
+		<form method="post" action='@Url.Action("Cadastrar")' enctype="multipart/form-data" class="frm-cad-equipe">
+			<div class="cadequipe-titulo">
+				<h1>Cadastro de Equipes</h1>
+				<hr />
+			</div>
+
+			<input name="Nome" required class="campo-entrada" type="text" placeholder="Digite o nome da sua equipe:" />
+
+			<label style="cursor:pointer;" class="foto" for="foto-file">
+				<input name="Imagem" type="file" id="foto-file">
+			</label>
+
+			<button style="cursor: pointer" type="submit">Cadastro</button>
+		</form>
+
+		<!-- TABELA CADASTRO DE EQUIPES -->
+
+		<table>
+			<caption>
+				Equipes
+			</caption>
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Nome</th>
+					<th>Imagem</th>
+					<th>Ações</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (Equipe equipe in ViewBag.Equipe) {
+				<tr>
+					<td row-label="ID">@equipe.IdEquipe</td>
+					<td row-label="Nome">@equipe.Nome</td>
+					<td row-label="Imagem">
+						<img src="/img/Equipes/@equipe.Imagem" alt="Imagem da equipe @equipe.Nome" width="50px" />
+					</td>
+					<td row-label="Ações">
+						<a asp-area="" asp-controller="Equipe" asp-action="Excluir" asp-route-id="@equipe.IdEquipe"><img
+								class="yellow-trash" src="~/assets/trash.png" alt="" /></a>
+						<a asp-area="" asp-controller="Equipe" asp-action="Editar"
+							asp-route-id="@equipe.IdEquipe">Editar</a>
+					</td>
+				</tr>
+				}
+			</tbody>
+		</table>
+	</section>
+</main>
+<section class="sem-suporte">
+	<h1>Esse site ainda não possui suporte para esse tamanho de tela.</h1>
+	<img src="~/assets/triste.png" alt="Carinha triste" />
+</section>

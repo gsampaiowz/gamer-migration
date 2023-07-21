@@ -1,0 +1,40 @@
+@model Jogador
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<link rel="stylesheet" href="~/css/login.css">
+<!-- FORMULÁRIO DE LOGIN -->
+<main><section class="fundo-login">
+        <div class="bkg-login">
+            <form method="post" action='@Url.Action("Logar")' enctype="application/x-www-form-urlencoded" class="frm-login">
+                <div class="login-title">
+                    <hr class="login-line">
+                    <h1>Login</h1>
+                </div>
+                <div class="frm-linha">
+                    <div class="bkg-input">
+                        <img src="~/assets/vector-user.svg" alt="ícone de usuário">
+                        <input type="email" name="Email" id="email" placeholder="Digite seu e-mail:">
+                    </div>
+                </div>
+                <div class="frm-linha">
+                    <div class="bkg-input">
+                        <img src="~/assets/vector-key.svg" alt="ícone de chave">
+                        <input type="password" name="Senha" id="password" placeholder="Digite sua senha:">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-logar">Logar</button>
+
+                <br>
+                @TempData.Peek("Message")
+            </form>
+        </div>
+    </section></main>
+    
+    <section class="sem-suporte">
+    <h1>Esse site ainda não possui suporte para esse tamanho de tela.</h1>
+    <img src="~/assets/triste.png" alt="Carinha triste">
+</section>
