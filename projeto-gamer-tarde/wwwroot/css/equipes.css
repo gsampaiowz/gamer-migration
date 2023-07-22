@@ -139,6 +139,12 @@ main .cadastro-equipes .flex-file label {
 main .cadastro-equipes .flex-file label:hover {
 	cursor: pointer;
 }
+main .cadastro-equipes .frm-cad-equipe .foto {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+}
 main .cadastro-equipes .frm-cad-equipe .foto::before {
 	display: flex;
 	justify-content: center;
@@ -154,6 +160,7 @@ main .cadastro-equipes .frm-cad-equipe .foto::before {
 }
 main .cadastro-equipes .frm-cad-equipe .foto input {
 	cursor: pointer;
+	width: 160px;
 }
 main .cadastro-equipes .frm-cad-equipe .foto p {
 	font-size: 13px;
@@ -163,6 +170,7 @@ main .cadastro-equipes .frm-cad-equipe .foto p:after {
 }
 main .cadastro-equipes .frm-cad-equipe .foto img {
 	width: 50px;
+	border-radius: 8px;
 }
 /* button */
 main .cadastro-equipes .frm-cad-equipe button {
@@ -317,6 +325,8 @@ main .cadastro-equipes table td img.yellow-trash {
 		font-size: 16px;
 		gap: 20px;
 		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 		align-items: center;
 	}
 	main .cadastro-equipes .frm-cad-equipe .foto::before {

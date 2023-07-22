@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Sampaio\\Desktop\\gamer-migration\\projeto-gamer-tarde\\projeto-gamer-tarde.csproj": {}
+    "C:\\Users\\Sampaio\\Desktop\\gamer-migration\\projeto-gamer-tarde\\projeto-gamer-tarde.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Sampaio\\Desktop\\gamer-migration\\projeto-gamer-tarde\\projeto-gamer-tarde.csproj": {
+    "C:\\Users\\Sampaio\\Desktop\\gamer-migration\\projeto-gamer-tarde\\projeto-gamer-tarde.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Sampaio\\Desktop\\gamer-migration\\projeto-gamer-tarde\\projeto-gamer-tarde.csproj",
+        "projectUniqueName": "C:\\Users\\Sampaio\\Desktop\\gamer-migration\\projeto-gamer-tarde\\projeto-gamer-tarde.csproj",
         "projectName": "projeto-gamer-tarde",
-        "projectPath": "c:\\Users\\Sampaio\\Desktop\\gamer-migration\\projeto-gamer-tarde\\projeto-gamer-tarde.csproj",
+        "projectPath": "C:\\Users\\Sampaio\\Desktop\\gamer-migration\\projeto-gamer-tarde\\projeto-gamer-tarde.csproj",
         "packagesPath": "C:\\Users\\Sampaio\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Sampaio\\Desktop\\gamer-migration\\projeto-gamer-tarde\\obj\\",
+        "outputPath": "C:\\Users\\Sampaio\\Desktop\\gamer-migration\\projeto-gamer-tarde\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sampaio\\AppData\\Roaming\\NuGet\\NuGet.Config"
